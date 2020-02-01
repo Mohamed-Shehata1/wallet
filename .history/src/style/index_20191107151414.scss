@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+//  browsers reset
+@import 'addons/reset';
+
+// flexbox and helper calsses
+@import 'addons/flex';
+@import 'addons/helpers';
+
+
+body {
+    background-color: #F7CD75;
+    height: 100vh;
+    display: block;
+}
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+    .left-side {
+        background-color: #F2F2F2;
+        width: 30%;
+        padding: 2rem;
+
+        .left-side-header {
+            padding:  1rem 0;
+            h1 {
+                font-weight: bold;
+                color: #000;
+                font-size: 1.5rem;;
+            }
+
+            button {
+                color: #000;
+                font-weight: bold;
+                font-size: 1.5rem;;
+            }
+        }
+    }
+}
+
+// styles in desktop screens
+@media  (min-width: 1025px) {}
+
+// styles in mobile and tablet screens
+@media  (max-width: 1024px) {}
+
+// styles in mobile only screens
+@media  (max-width: 480px) {}

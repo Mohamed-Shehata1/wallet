@@ -1,0 +1,165 @@
+// paddings
+
+.no-padding {
+    padding: 0;
+}
+.padding-05 {
+    padding: .5rem;
+}
+.padding-1 {
+    padding: 1rem;
+}
+.padding-ver-05 {
+    padding: .5rem 0;
+}
+.padding-ver-1 {
+    padding: 1rem 0;
+}
+.padding-hrz-05 {
+    padding: 0 .5rem;
+}
+.padding-hrz-1 {
+    padding: 0 1rem;
+}
+.padding-top-05 {
+    padding-top: .5rem;
+}
+.padding-top-1 {
+    padding-top: 1rem;
+}
+
+
+// margins
+
+.no-margin {
+    margin: 0;
+}
+.margin-05 {
+    margin: .5rem;
+}
+.margin-1 {
+    margin: 1rem;
+}
+.margin-ver-05 {
+    margin: .5rem 0;
+}
+.margin-ver-1 {
+    margin: 1rem 0;
+}
+.margin-hrz-05 {
+    margin: 0 .5rem;
+}
+.margin-hrz-1 {
+    margin: 0 1rem;
+}
+.margin-top-05 {
+    margin-top: .5rem;
+}
+.margin-top-1 {
+    margin-top: 1rem;
+}
+
+
+// font weights
+
+.noraml {
+    font-weight: normal;
+}
+.bold {
+    font-weight: bold;
+}
+
+// font sizes
+
+.font-08 {
+    font-size: .8rem
+}
+.font-1 {
+    font-size: 1rem;
+}
+.font-12 {
+    font-size: 1.2rem;
+}
+
+// colors
+.c-blue {
+    color: $blue;
+}
+.bg-blue {
+    background-color: $blue;
+}
+.c-white {
+    color: $white;
+}
+.bg-white {
+    background-color: $white;
+}
+.c-dark {
+    color: $dark;
+}
+.bg-dark {
+    background-color: $dark;
+}
+.c-light {
+    color: $light;
+}
+.bg-light {
+    background-color: $light;
+}
+.c-orange {
+    color: $orange;
+}
+
+.error {
+    padding: 0.5rem;
+    border: 2px solid red;
+    border-radius: .5rem;
+    background-color: #ffe2e2;
+    color: red;
+}
+
+// widths
+
+.full-width {
+    width: 100%;
+    
+    &.width-margins {
+        width: calc(100% - 1rem);
+        margin: .5rem;
+    }
+}
+
+.half-width {
+    width: 50%;
+    
+    &.width-margins {
+        width: calc(50% - 1rem);
+        margin: .5rem;
+    }
+}
+
+// text
+
+.text-center {
+    text-align: center;
+}
+
+.text-dec-none {
+    text-decoration: none;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+// images
+
+.image {
+    margin: .25rem;
+    max-width: 100%;
+    object-fit: contain;
+}

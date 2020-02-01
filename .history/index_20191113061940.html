@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 9</title>
+  <link rel="stylesheet" href="./dist/bundleCss.css" />
+</head>
+<body>
+  <div class="page-container flex">
+    <div class="left-side padding-1">
+      <div class="left-side-header flex content-space-between">
+        <h1>My Wallets</h1>
+        <button>
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+      </div>
+      <div class="left-side-container">
+        <div class="credit-card active">
+          <div class="card-logo visa"></div>
+          <p class="card-text">**** **** **** 1234</p>
+          <p class="card-text">Valid thru: 07/19</p>
+        </div>
+        <div class="credit-card">
+          <div class="card-logo master-card"></div>
+          <p class="card-text">**** **** **** 1234</p>
+          <p class="card-text">Valid thru: 07/19</p>
+        </div>
+        <div class="credit-card">
+          <div class="card-logo maestro"></div>
+          <p class="card-text">**** **** **** 1234</p>
+          <p class="card-text">Valid thru: 07/19</p>
+        </div>
+      </div>
+    </div>
+    <div class="right-side grow">
+      <div class="right-side-header flex content-space-between margin-1">
+        <h2 class="title bold c-dark">Current Balance</h2>
+        <p class="balance bold">$<span class="amount">12345</span>.<sup class="fraction">23</sup></p>
+      </div>
+      <div class="right-side-container padding-1">
+        <div class="transaction flex items-center plus">
+          <span class="icon"></span>
+          <div class="data grow">
+            <h2 class="transaction-name">Funds Added</h2>
+            <p class="transaction-hint">Payment #6544 - 13 Nov 2019</p>
+          </div>
+          <div class="balance bold">$<span class="amount">12345</span>.<sup class="fraction">23</sup></div>
+        </div>
+        <div class="transaction flex items-center minus">
+          <span class="icon"></span>
+          <div class="data grow">
+            <h2 class="transaction-name">Funds Added</h2>
+            <p class="transaction-hint">Payment #6544 - 13 Nov 2019</p>
+          </div>
+          <div class="balance bold">$<span class="amount">12345</span>.<sup class="fraction">23</sup></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-container">
+    <form action="#">
+      <div class="input-field">
+        <span class="field-label">Card Number</span>
+        <input class="input" type="text" name="card_number" placeholder="Card Number" required>
+      </div>
+      <div class="input-field">
+        <span class="field-label">Expiray Date</span>
+        <input class="input" type="text" name="expiray_year" placeholder="Year" required>
+        <input class="input" type="text" name="expiray_month" placeholder="Month" required>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

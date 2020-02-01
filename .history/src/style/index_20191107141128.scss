@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+//  browsers reset
+@import 'addons/reset';
+
+// flexbox and helper calsses
+@import 'addons/flex';
+@import 'addons/helpers';
+
+
+body {
+    background-color: #F7CD75;
+}
+
+.page-container {
+    width: 900px;
+    height: 500px;
+    display: block;
+    background-color: #fff;
+    margin: auto;
+}
+
+// styles in desktop screens
+@media  (min-width: 1025px) {}
+
+// styles in mobile and tablet screens
+@media  (max-width: 1024px) {}
+
+// styles in mobile only screens
+@media  (max-width: 480px) {}

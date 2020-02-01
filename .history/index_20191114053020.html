@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 9</title>
+  <link rel="stylesheet" href="./dist/bundleCss.css" />
+</head>
+<body>
+  <div class="page-container flex">
+    <div class="left-side padding-1">
+      <div class="left-side-header flex content-space-between">
+        <h1>My Wallets</h1>
+        <button class="add-card-button">
+            <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+      </div>
+      <div class="left-side-container">
+        <div class="credit-card active">
+          <div class="card-logo visa"></div>
+          <p class="card-text">**** **** **** 1234</p>
+          <p class="card-text">Valid thru: 07/19</p>
+        </div>
+        <div class="credit-card">
+          <div class="card-logo mastercard"></div>
+          <p class="card-text">**** **** **** 1234</p>
+          <p class="card-text">Valid thru: 07/19</p>
+        </div>
+        <div class="credit-card">
+          <div class="card-logo maestro"></div>
+          <p class="card-text">**** **** **** 1234</p>
+          <p class="card-text">Valid thru: 07/19</p>
+        </div>
+      </div>
+    </div>
+    <div class="right-side grow">
+      <div class="right-side-header flex content-space-between margin-1">
+        <h2 class="title bold c-dark">Current Balance</h2>
+        <p class="balance bold">$<span class="amount">00</span>.<sup class="fraction">00</sup></p>
+      </div>
+      <div class="right-side-container padding-1">
+        <div class="tranasctions-list">
+          <div class="transaction flex items-center plus">
+            <span class="icon"></span>
+            <div class="data grow">
+              <h2 class="transaction-name">Funds Added</h2>
+              <p class="transaction-hint">Payment #6544 - 13 Nov 2019</p>
+            </div>
+            <div class="balance bold" data-value="123.23">$<span class="amount">123</span>.<sup class="fraction">23</sup></div>
+          </div>
+          <div class="transaction flex items-center minus">
+            <span class="icon"></span>
+            <div class="data grow">
+              <h2 class="transaction-name">Funds Added</h2>
+              <p class="transaction-hint">Payment #6544 - 13 Nov 2019</p>
+            </div>
+            <div class="balance bold" data-value="145">$<span class="amount">145</span>.<sup class="fraction">00</sup></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="add-card-modal form-container">
+    <form class="form-field" action="#">
+      <div class="input-field ">
+          <div class="field-options">
+            <div class="option">
+              <input type="radio" value="visa" name="card_type" required checked>
+              <img src="./img/visa.svg" alt="Visa">
+            </div>
+            <div class="option">
+              <input type="radio" value="mastercard" name="card_type" required>
+              <img src="./img/mastercard.svg" alt="Master Card">
+            </div>
+            <div class="option">
+              <input type="radio" value="maestro" name="card_type" required>
+              <img src="./img/maestro.svg" alt="Maestro">
+            </div>
+          </div>
+      </div>
+      <div class="input-field">
+        <p class="field-label">Card Number</p>
+        <input class="input" type="text" name="card_number" placeholder="Card Number" required>
+      </div>
+      <div class="flex items-center expiray-fields">
+        <div class="input-field">
+          <p class="field-label">Expiry Date</p>
+          <input class="input" type="text" name="expiray_year" placeholder="Year" required>
+        </div>
+        <div class="input-field">
+          <p class="field-label">Expiry Month</p>
+          <input class="input" type="text" name="expiray_month" placeholder="Month" required>
+        </div>
+      </div>
+      <button type="submit" class="btn">Add</button>
+    </form>
+  </div>
+
+  <script src="./dist/bundleJs.js"></script>
+</body>
+</html>

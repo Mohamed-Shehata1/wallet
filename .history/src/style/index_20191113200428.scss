@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+//  browsers reset
+@import 'addons/reset';
+
+// flexbox and helper calsses
+@import 'addons/flex';
+@import 'addons/helpers';
+
+
+body {
+    background-color: #F7CD75;
+    height: 100vh;
+    display: block;
+}
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+    .balance {
+        font-size: 1.5rem;
+        .fraction {
+            font-size: 1rem;
+            vertical-align: top;
+        }
+    }
+
+    .left-side {
+        background-color: #F2F2F2;
+        width: 340px;
+        padding: 2rem;
+
+        .left-side-header {
+            padding:  1rem 0;
+            h1 {
+                font-weight: bold;
+                color: #444346;
+                font-size: 1.5rem;;
+            }
+
+            button {
+                border: 0;
+                outline: 0;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
+
+        .left-side-container {
+            max-height: 500px;
+            overflow: auto;
+            
+            .credit-card {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: .2rem;
+                cursor: pointer;
+                transition: border 160ms;
+                padding: .5rem;
+                margin-bottom: 1rem;
+
+                &.active,
+                &:hover {
+                    border: 1px solid #8793C6;
+                    box-shadow: 0 0 2px #8793C6;
+                }
+
+                .card-logo {
+                    height: 3rem;
+                    width: 100%;
+                    padding: .25rem;
+                    margin-bottom: .5rem;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    &.visa {
+                        background-image: url(../../img/visa.svg);
+                    }
+                    &.master-card {
+                        background-image: url(../../img/mastercard.svg);
+                    }
+                    &.maestro {
+                        background-image: url(../../img/maestro.svg);
+                    }
+                }
+
+                .card-text {
+                    color: #89898B;
+                    line-height: 1.5rem;
+                    padding: 0 .5rem;
+                    font-weight: bold;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    .right-side {
+        margin: 1rem;
+        padding: 1rem;
+
+        .right-side-header {
+            padding-bottom: 2rem;
+            align-items: flex-start;
+            border-bottom: 1px solid #ccc;
+
+            .title {
+                color: #444346;
+                font-size: 1.5rem;
+
+            }
+        }
+
+        .right-side-container {
+            .transaction{
+                margin: .5rem 0;
+
+                .icon {
+                    width: 2rem;
+                    height: 2rem;
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                }
+
+                .data {
+                    padding: 1rem;
+
+                    .transaction-name {
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        line-height: 2rem;
+                    }
+                    .transaction-hint {
+                        color: #C3C3C3;
+                        font-weight: bold;
+                        line-height: 1rem;
+                    }
+                }
+
+                &.plus {
+                    .icon {
+                        background-image: url(../../img/plus.svg);
+                    }
+                    .balance {
+                        color: #90D167;
+                    }
+                }
+                &.minus {
+                    .icon {
+                        background-image: url(../../img/minus.svg);
+                    }
+                    .balance {
+                        color: #8797C6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-container {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #0003;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    &.open {
+        display: flex;
+        z-index: 2;
+    }
+
+    .form-field {
+        width: 600px;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: .4rem;
+
+        .input-field {
+            width: 100%;
+            padding: .5rem 0;
+
+            .field-label {
+                font-weight: bold;
+                line-height: 1.5rem;
+            }
+
+            input[type=text] {
+                width: 100%;
+                padding: .5rem;
+                border: 1px solid #ccc;
+                border-radius: .2rem;
+                background-color: #fff;
+                color: #444346;
+                font-size: 1rem;
+            }
+
+            .field-options {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                
+                .option {
+                    position: relative;
+
+                    img {
+                        max-height: 5rem;
+                        object-fit: contain;
+                        z-index: 1;
+                    }
+
+                    input[type=radio] {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+                        opacity: 0;
+
+                        &:checked + img {
+                            border: 2px solid #8697c6;
+                            border-radius: .2rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        .expiray-fields {
+            justify-content: space-between;
+            .input-field {
+                width: calc(50% - .5rem);
+            }
+        }
+
+        button[type=submit] {
+            width: 100%;
+            background-color: #1c52a0;
+            color: #fff;
+            text-align: center;
+            padding: .5rem;
+            border-radius: .2rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+// styles in desktop screens
+@media  (min-width: 1025px) {}
+
+// styles in mobile and tablet screens
+@media  (max-width: 1024px) {}
+
+// styles in mobile only screens
+@media  (max-width: 480px) {}

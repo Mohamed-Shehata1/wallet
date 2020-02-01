@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+//  browsers reset
+@import 'addons/reset';
+
+// flexbox and helper calsses
+@import 'addons/flex';
+@import 'addons/helpers';
+
+
+body {
+    background-color: #F7CD75;
+    height: 100vh;
+    display: block;
+}
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+
+    .left-side {
+        background-color: #F2F2F2;
+        width: 340px;
+        padding: 2rem;
+
+        .left-side-header {
+            padding:  1rem 0;
+            h1 {
+                font-weight: bold;
+                color: #444346;
+                font-size: 1.5rem;;
+            }
+
+            button {
+                border: 0;
+                outline: 0;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
+
+        .left-side-container {
+            
+            .credit-card {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: .2rem;
+                cursor: pointer;
+                transition: border 160ms;
+                padding: .5rem;
+                margin-bottom: 1rem;
+
+                &.active,
+                &:hover {
+                    border: 1px solid #8793C6;
+                    box-shadow: 0 0 2px #8793C6;
+                }
+
+                .card-logo {
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    height: 3rem;
+                    width: 100%;
+                    padding: .25rem;
+                    margin-bottom: .5rem;
+
+                    &.visa {
+                        background-image: url(../../img/visa.svg);
+                    }
+                    &.master-card {
+                        background-image: url(../../img/mastercard.svg);
+                    }
+                    &.maestro {
+                        background-image: url(../../img/maestro.svg);
+                    }
+                }
+
+                .card-text {
+                    color: #89898B;
+                    line-height: 1.5rem;
+                    padding: 0 .5rem;
+                    font-weight: bold;
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    .right-side {
+        margin: 1rem;
+
+        .right-side-header {
+            padding-bottom: 1rem;
+            align-items: flex-start;
+
+            .title {
+                color: #444346;
+            }
+        }
+    }
+}
+
+// styles in desktop screens
+@media  (min-width: 1025px) {}
+
+// styles in mobile and tablet screens
+@media  (max-width: 1024px) {}
+
+// styles in mobile only screens
+@media  (max-width: 480px) {}
